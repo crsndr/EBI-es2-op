@@ -13,6 +13,6 @@ Installation
 gem install github-markup
 ```
 
-This is an example of refer to another documenta internal on Github
+This is an example of refer to another document internal on Github
 
 See [Contributing](CONTRIBUTING.md).
