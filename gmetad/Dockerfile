@@ -17,8 +17,13 @@ RUN set -x \
 
 # Expose default HTTP connector port and gmetad.
 EXPOSE 80
-EXPOSE 8649
+EXPOSE 8659
 
 COPY "ganglia.conf" "/etc/httpd/conf.d/ganglia.conf"
+COPY "gmetad.conf" "/etc/gmetad.conf"
+COPY "gmond.conf" "/etc/gmond.conf"
 
-ENTRYPOINT [/sbin/httpd -k start && /sbin/gmetad]
+RUN /sbin/gmetad
+RUN /sbin/gmond
+
+ENTRYPOINT [/sbin/httpd -k start]
