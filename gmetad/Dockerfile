@@ -1,4 +1,4 @@
-FROM fedora:latest
+FROM fedora:26
 
 MAINTAINER Andrea Cristofori <crsndr@ebi.ac.uk>
 
@@ -6,12 +6,14 @@ MAINTAINER Andrea Cristofori <crsndr@ebi.ac.uk>
 #ENV https_proxy host:port
 
 RUN set -x \
-    && mkdir -p /var/lib/ganglia/rrds \
-    && chown -R ganglia:ganglia /var/lib/ganglia/rrds \
-    && dnf install \
+    && dnf -y install \
     ganglia-gmond \
     ganglia-gmetad \
-    ganglia-web
+    ganglia-web \
+#    mod_fcgid \
+    && mkdir -p /var/lib/ganglia/rrds \
+    && chown -R ganglia:ganglia /var/lib/ganglia/rrds
+#    && chown -R apache:apache /run/php-fpm
 
 # Use the unprivileged account.
 
@@ -22,8 +24,8 @@ EXPOSE 8659
 COPY "ganglia.conf" "/etc/httpd/conf.d/ganglia.conf"
 COPY "gmetad.conf" "/etc/gmetad.conf"
 COPY "gmond.conf" "/etc/gmond.conf"
+COPY "startup.sh" "/startup.sh"
+COPY "start_apache.sh" "/start_apache.sh"
 
-RUN /sbin/gmetad
-RUN /sbin/gmond
-
-ENTRYPOINT [/sbin/httpd -k start]
+ENTRYPOINT ["/startup.sh"]
+CMD ["/start_apache.sh"]
