@@ -25,7 +25,7 @@ git clone https://github.com/crsndr/EBI-es2-op.git
 After cloning the repository change directory to gmetad
 
 ```
-cd gmetad
+cd EBI-es2-op/gmetad
 ```
 
 build the new image
