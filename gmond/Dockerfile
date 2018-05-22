@@ -3,6 +3,7 @@ FROM fedora:26
 MAINTAINER Andrea Cristofori <crsndr@ebi.ac.uk>
 
 RUN set -x \
+#    && dnf -y update \
     && dnf -y install \
     ganglia-gmond
 
