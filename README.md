@@ -76,7 +76,7 @@ you should see an interface similar to the following:
 
 ![Alt text](/doc/ganglia.png?raw=true "Ganglia screenshot")
 
-which after a couple of minutes should display the graphs contains all the detail on CPU, memory and disk requested. To see the details click on the scroll down menu "Select a source" and choose "EBI-es2-op". On the next page click the new scroll down menu "Choose a node". The container being monitored should appear with its IP while the container running gmetad should show it's container ID.
+which after a couple of minutes should display the graphs contains all the detail on CPU, memory and disk requested. To see the details click on the scroll down menu "Select a source" and choose "EBI-es2-op". On the next page click the new scroll down menu "Choose a node". The container being monitored should appear with its IP while the container running gmetad should show it's container ID. When the container IP is selected a page with all the grphs related to that VM is shown. The graph can be selected to se more detail, it's possible to select a specific timespan, etc
 
 
 ## Optional: Cleanup
