@@ -20,7 +20,7 @@ git clone https://github.com/crsndr/EBI-es2-op.git
 ```
 
 
-## Create the gnetad instance and start a container
+## Create the gmetad instance and start a container
 
 After cloning the repository change directory to gmetad
 
@@ -43,7 +43,7 @@ docker run --name gmetad -idt -p 80:80 -p 8659:8659 gmetad26:1.0
 This will start a container and bind port 80 of the host machine to port 80 for the Apache web interface of the container and port 8659 to port 8659 of gmond.
 
 
-## Create the gnetad instance and start a container
+## Create the gmond instance and start a container
 
 After the creation of the gmetad container we'll repeat in a similar way for gmond. From the initial clone directory:
 
