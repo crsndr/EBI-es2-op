@@ -77,3 +77,24 @@ and you should see an interface similar to the following:
 IMAGE
 
 which contains all the detail on CPU, memory and disk requested.
+
+
+**Cleanup (Optional)
+
+Once everything is tested we can stop the containers:
+
+```
+docker container stop gmond gmetad
+```
+
+and remove them:
+
+```
+docker container rm gmond gmetad
+```
+
+and delete all three images that should be now present in the machine:
+
+```
+docker image rm gmetad26:1.0 gmond26:1.0 docker.io/fedora:26
+```
