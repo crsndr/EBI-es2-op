@@ -74,7 +74,7 @@ http://localhost/ganglia
 
 and you should see an interface similar to the following:
 
-IMAGE
+![Alt text](/ganglia.png?raw=true "Ganglia screenshot")
 
 which contains all the detail on CPU, memory and disk requested.
 
