@@ -63,7 +63,7 @@ and run a container based on this newly created image:
 docker run --name gmond -idt gmond26:1.0
 ```
 
-##Checking the configuration
+## Checking the configuration
 
 From the host machine it should enough to open a browser to:
 
@@ -79,7 +79,7 @@ IMAGE
 which contains all the detail on CPU, memory and disk requested.
 
 
-_Cleanup (Optional)_
+## Optional: Cleanup
 
 Once everything is tested we can stop the containers:
 
