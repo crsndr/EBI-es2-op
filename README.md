@@ -79,7 +79,7 @@ IMAGE
 which contains all the detail on CPU, memory and disk requested.
 
 
-**Cleanup (Optional)
+_Cleanup (Optional)_
 
 Once everything is tested we can stop the containers:
 
