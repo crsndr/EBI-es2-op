@@ -6,7 +6,7 @@ RUN set -x \
     && dnf -y install \
     ganglia-gmond
 
-COPY "gmond.conf" "/etc/gmond.conf"
+COPY "gmond.conf" "/etc/ganglia/gmond.conf"
 COPY "start_gmond.sh" "/start_gmond.sh"
 
 CMD ["/start_gmond.sh"]
