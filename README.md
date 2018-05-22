@@ -72,11 +72,11 @@ From the host machine it should enough to open a browser to:
 http://localhost/ganglia
 ```
 
-and you should see an interface similar to the following:
+you should see an interface similar to the following:
 
 ![Alt text](/doc/ganglia.png?raw=true "Ganglia screenshot")
 
-which contains all the detail on CPU, memory and disk requested.
+which after a couple of minutes should display the graphs contains all the detail on CPU, memory and disk requested. To see the details click on the scroll down menu "Select a source" and choose "EBI-es2-op". On the next page click the new scroll down menu "Choose a node". The container being monitored should appear with its IP while the container running gmetad should show it's container ID.
 
 
 ## Optional: Cleanup
