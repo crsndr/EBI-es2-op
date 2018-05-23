@@ -3,7 +3,7 @@
 ## Description
 ### Before starting
 
-A machine that with Docker preinstalled and running is required for the rest of the configuration and to run the Docker containers.
+A machine with Docker preinstalled and running is required for the rest of the configuration and to run the Docker containers.
 
 ### Obtaining all the files
 
@@ -13,7 +13,7 @@ The solution presented is based on Ganglia. At the end of the setup we'll have t
 
 PLEASE NOTE: To successfully complete the instruction port 80 and 8659 should be available.
 
-To reproduce the setup you nedd to clone [https://github.com/crsndr/EBI-es2-op.git](https://github.com/crsndr/EBI-es2-op.git) repository:
+To reproduce the setup you need to clone [https://github.com/crsndr/EBI-es2-op.git](https://github.com/crsndr/EBI-es2-op.git) repository:
 
 ```
 git clone https://github.com/crsndr/EBI-es2-op.git
@@ -48,7 +48,7 @@ This will start a container and bind port 80 of the host machine to port 80 for 
 After the creation of the gmetad container we'll repeat in a similar way for gmond. From the initial clone directory:
 
 ```
-cd gmond
+cd ../gmond
 ```
 
 and run a container based on this newly created image:
