@@ -98,3 +98,8 @@ and delete all three images that should be now present in the machine:
 ```
 docker image rm gmetad26:1.0 gmond26:1.0 docker.io/fedora:26
 ```
+
+
+## Final consideration
+
+Ganglia affers, out of the box, monitoring for many metrics related to CPU, disk, network, etc. In this specific case for a DB might be useful to monitor disk IO, CPU, etc while for web servers, transferring fles, etc other than disk IO might be of interest the network activity as well. All the test for the previous case are available on Ganglia. In the case of a software that might open many ports it might be of interest to monitor the number of ports and maybe the nuber of open files. For this a custum monitor could be added as Gangla support the implementation of external monitor defined by the user.
