@@ -6,7 +6,7 @@ MAINTAINER Andrea Cristofori <crsndr@ebi.ac.uk>
 #ENV https_proxy host:port
 
 RUN set -x \
-#    && dnf -y update \
+    && dnf -y update \
     && dnf -y install \
     ganglia-gmond \
     ganglia-gmetad \
