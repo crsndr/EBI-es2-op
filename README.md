@@ -51,7 +51,7 @@ After the creation of the gmetad container we'll repeat in a similar way for gmo
 cd ../gmond
 ```
 
-and run a container based on this newly created image:
+build the new image:
 
 ```
 docker build -t gmond26:1.0 .
@@ -76,7 +76,7 @@ you should see an interface similar to the following:
 
 ![Alt text](/doc/ganglia.png?raw=true "Ganglia screenshot")
 
-which after a couple of minutes should display the graphs contains all the detail on CPU, memory and disk requested. To see the details click on the scroll down menu "Select a source" and choose "EBI-es2-op". On the next page click the new scroll down menu "Choose a node". The container being monitored should appear with its IP while the container running gmetad should show it's container ID. When the container IP is selected a page with all the grphs related to that VM is shown. The graph can be selected to se more detail, it's possible to select a specific timespan, etc
+which after a couple of minutes should display the graphs that contains all the detail on CPU, memory and disk requested. To see the details click on the scroll down menu "Select a source" and choose "EBI-es2-op". On the next page click the new scroll down menu "Choose a node". The container being monitored should appear with its IP while the container running gmetad should show it's container ID. When the container IP is selected a page with all the grphs related to that VM is shown. The graph can be selected to se more detail, it's possible to select a specific timespan, etc
 
 
 ## Optional: Cleanup
@@ -102,5 +102,5 @@ docker image rm gmetad26:1.0 gmond26:1.0 docker.io/fedora:26
 
 ## Final consideration
 
-Ganglia affers, out of the box, monitoring for many metrics related to CPU, disk, network, etc. In this specific case for a DB might be useful to monitor disk IO, CPU, etc while for web servers, transferring fles, etc other than disk IO might be of interest the network activity as well. All the test for the previous cases are available on Ganglia. In the case of a software that might open many ports it might be of interest to monitor the number of ports and maybe the nuber of open files. For this a custum monitor could be added as Gangla support the implementation of external monitor defined by the user.
-To implement the solution proposed it's enough to install the gmetad that is being provided in the docker image and, in the development machine/container, install gmond with the configuration gmond.conf provided (in practice replicate the configuration of the gmond container provided) and ensure that gmond is started.
+Ganglia affers, out of the box, monitoring for many metrics related to CPU, disk, network, etc. In this specific case for a DB might be useful to monitor disk IO, CPU, etc while for web servers, file transfer, etc other than disk IO might be of interest the network activity as well. All the test for the previous cases are available on Ganglia. In the case of a software that might open many ports it might be of interest to monitor the number of ports and maybe the number of open files. For this a custum monitor could be added as Gangla support the implementation of external monitor defined by the user.
+To implement the solution proposed it's enough to run the gmetad docker image as described in the previous steps and, in the development machine/container, install gmond with the configuration gmond.conf provided (in practice replicate the configuration of the gmond container provided) and ensure that gmond is started.
